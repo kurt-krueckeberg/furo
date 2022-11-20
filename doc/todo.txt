@@ -1,0 +1,2 @@
+Figure out how to create internal links to other .rst files
+Figureout how to colorize table using the themes built-uin color or using a color generator.

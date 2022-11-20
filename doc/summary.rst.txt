@@ -1,0 +1,58 @@
+Petzen Church Book 1785-1827
+============================
+
+Content Summary
+---------------
+
+This table shows the occurances of the Krückeberg and Weiland surnames
+in the Petzen and Nammen Church Register, 1785 to 1827. The images are
+from the `Archion.de <https://archion.de>`__ Protestant Church Book
+`Portal <https://www.archion.de>`__.
+
+Note: The permalinks (a permanent link that will not change) only work
+if you have an `Archion.de <https://www.archion.de>`__ subscription.
+
+.. raw:: html
+
+   <!--
+   Just use <https://archion.de/....> for the permalink, and locallinks for the images, li e
+   -->
+
++--------+--------+--------+-----------+-----------+--------+--------+
+| Per    | Image  | Year   | Page No.  | Entry #   | Groom  | Bride  |
+| malink |        |        |           |           |        |        |
++========+========+========+===========+===========+========+========+
+| https  | [image | 1785   | 1         | 3         | Fri    | ?      |
+| ://www | 3][3]  |        |           |           | derich |        |
+| .archi |        |        |           |           | W      |        |
+| on.de/ |        |        |           |           | eiland |        |
+| p/e11a |        |        |           |           |        |        |
+| bbc73d |        |        |           |           |        |        |
++--------+--------+--------+-----------+-----------+--------+--------+
+| https  | [image | 1788   | 3         | 5         | Jobst  | ?      |
+| ://www | 4][4]  |        |           |           | He     |        |
+| .archi |        |        |           |           | inrich |        |
+| on.de/ |        |        |           |           | W      |        |
+| p/ae55 |        |        |           |           | eiland |        |
+| fafcc8 |        |        |           |           |        |        |
++--------+--------+--------+-----------+-----------+--------+--------+
+| https  | [image | 1790   | 5         | 8         | Johann | ?      |
+| ://www | 5][5]  |        |           |           | He     |        |
+| .archi |        |        |           |           | inrich |        |
+| on.de/ |        |        |           |           | Kruc   |        |
+| p/40fb |        |        |           |           | keberg |        |
+| bf3938 |        |        |           |           |        |        |
++--------+--------+--------+-----------+-----------+--------+--------+
+| https  | [image | 1790   | 5         | 13        | Jobst  | Phil   |
+| ://www | 5][5]  |        |           |           | He     | ippine |
+| .archi |        |        |           |           | inrich | Chr    |
+| on.de/ |        |        |           |           | Kruc   | istine |
+| p/40fb |        |        |           |           | keberg | El     |
+| bf3938 |        |        |           |           |        | eonore |
+|        |        |        |           |           |        | Teg    |
+|        |        |        |           |           |        | tme[ij |
+|        |        |        |           |           |        | or     |
+|        |        |        |           |           |        | y]ern  |
++--------+--------+--------+-----------+-----------+--------+--------+
+
+[3]: [4]: [5]:
