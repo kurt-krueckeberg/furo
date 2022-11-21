@@ -7,7 +7,7 @@ The scale option for `:image:` and `:figure:` seems to require the the python Pi
 * https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure
 
 
-When using figures in tables, width seesm to be a better choice and avoids distortion.
+When using figures in tables, the `width seesm to be a better choice and avoids distortion.
 
 The default figure--and image--target seems to be to display the full image.
 
