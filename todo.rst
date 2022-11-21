@@ -30,6 +30,6 @@ Ideas:
 
 - Maybe an ordered list or single-column table of figures with captions, targets, a figclass, a width (or figwidth) and n explicita taget or the default self-target.
   The alginment of the figures can be either center or left.
-- The pages of bilds will include a top-level header and section headers for--what--the person's name likely and the transcription.
-- We need some place for transcribing the colun headers or using an include to repeated include it.s
+- The pages of images will include a top-level header and section headers for--what--the person's name likely and the transcription.
+- We need some place for transcribing the colun headers or using an include to repeated include it.
  
