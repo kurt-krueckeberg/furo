@@ -10,14 +10,14 @@ Figure Test
    case, the legend consists of this paragraph and the following
    table:
 
-   +--------------------------------+-----------------------+
-   | Symbol                         | Meaning               |
-   +================================+=======================+
-   | .. image:: t1.jpg              | test using archion    |
-   |    :target: ../_images/t1.jpg  |                       |
-   +--------------------------------+-----------------------+
-   | .. image:: t2.jpg              | test using archion    |
-   +--------------------------------+-----------------------+
+   +-------------------------------------+-----------------------+
+   | Symbol                              | Meaning               |
+   +=====================================+=======================+
+   | .. image:: bild11.jpg               | test using archion    |
+   |    :target: ../_images/bild11.jpg   |                       |
+   +-------------------------------------+-----------------------+
+   | .. image:: t2.jpg                   | test using archion    |
+   +-------------------------------------+-----------------------+
 
 Below is a figure whose caption includes a list of inages. This there is a figure, a pciture,
 followed by a list of pictures.
@@ -32,16 +32,15 @@ followed by a list of pictures.
    case, the legend consists of this paragraph and the following
    unordered list:
 
-   * Image A from church book
+   * Image 11 from church book
 
-   .. image:: t1.jpg         
-      :target: ../_images/t1.jpg
+   .. image:: bild11.jpg         
+      :target: ../_images/bild11.jpg
 
-   * Image B from church book
+   * Image 5-1, from church book
 
-     .. image:: t1.jpg         
-        :target: ../_images/t1.jpg
-
+     .. image:: b5.jpg         
+        :target: ../_images/b5.jpg
 
 Below is a list table that contains figures that could have captions, scaled and have tagets.
 
@@ -50,8 +49,24 @@ Below is a list table that contains figures that could have captions, scaled and
 
    * - Heading row 1, column 1
    * -
-       .. image:: t1.jpg         
-          :target: ../_images/t1.jpg
+       .. image:: bild1.jpg         
+          :target: ../_images/bild1.jpg
 
    * - Row 2, column 1
+
+Below is a list table that contains figures that could have captions, scaled and have tagets.
+
+.. list-table:: Title
+   :header-rows: 1
+
+   * - Heading row 1, column 1
+   * -
+       .. figure:: bild1.jpg         
+          :width: 50 %
+          :target: ../_images/bild1.jpg
+
+   * -   .. figure:: bild11.jpg         
+          :scale: 50 %
+          :target: ../_images/b5.jpg
+
 
