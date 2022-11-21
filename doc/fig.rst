@@ -49,14 +49,9 @@ Below is a list table that contains figures that could have captions, scaled and
    :header-rows: 1
 
    * - Heading row 1, column 1
-     - Heading row 1, column 2
-     - Heading row 1, column 3
    * -
        .. image:: t1.jpg         
           :target: ../_images/t1.jpg
-     -
-     -
+
    * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
 
