@@ -13,10 +13,9 @@ Under construction
 .. legend (arbitrary body elements). For page-based output media, figures might float to a different position if this helps 
 .. the page layout.
 
-.. image:: picture.jpeg
+.. image:: p.jpg
    :height: 100px
    :width: 200 px
    :scale: 50 %
    :alt: alternate text
    :align: right 
-   :target:

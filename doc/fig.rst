@@ -1,9 +1,8 @@
 Figure Test
 ===========
 
-.. figure:: picture.jpg
+.. figure:: p.jpg
    :scale: 50 %
-   :alt: map to buried treasure
 
    This is the caption of the figure (a simple paragraph).
 
@@ -11,11 +10,12 @@ Figure Test
    case, the legend consists of this paragraph and the following
    table:
 
-   +-----------------------+-----------------------+
-   | Symbol                | Meaning               |
-   +=======================+=======================+
-   | .. image:: t1.jpg     | test using archion    |
-   +-----------------------+-----------------------+
-   | .. image:: t2.jpg     | test using archion    |
-   +-----------------------+-----------------------+
+   +--------------------------------+-----------------------+
+   | Symbol                         | Meaning               |
+   +================================+=======================+
+   | .. image:: t1.jpg              | test using archion    |
+   |    :target: ../_images/t1.jpg  |                       |
+   +--------------------------------+-----------------------+
+   | .. image:: t2.jpg              | test using archion    |
+   +--------------------------------+-----------------------+
 
