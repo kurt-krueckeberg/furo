@@ -13,4 +13,5 @@ shows, and likely an html list. These legend-contained images can include a targ
 path must be specified as `../_images/blah-target.jpg`, which is sort of a hassle.
 
 Idea:
-Maybe an ordered list with figures whose default beavior is cliableilty is the way to do.
+Maybe an ordered list  of default-clickable figures 
+Or a c one c-olumn table with a style of no-borders containing figures that are styled with legends>
