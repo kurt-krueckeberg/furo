@@ -6,7 +6,7 @@ Below is a list-style table that contains figures that could have captions, scal
 .. list-table:: Table title goes here
    :header-rows: 1
 
-   * - Heading row 1, column 1
+   * - Click on image to expand it
    * -
        .. figure:: bild1.jpg         
           :width: 50 %
@@ -15,8 +15,8 @@ Below is a list-style table that contains figures that could have captions, scal
  
           Caption for image  
 
-          Legend where I will put description.
-
+          Legend where I will put description (or transcription).
+   
    * - 
        .. figure:: bild11.jpg         
           :scale: 25 %
