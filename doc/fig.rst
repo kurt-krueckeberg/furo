@@ -64,9 +64,11 @@ Below is a list table that contains figures that could have captions, scaled and
        .. figure:: bild1.jpg         
           :width: 50 %
           :target: ../_images/bild1.jpg
+          :figclass: fig-class
 
    * -   .. figure:: bild11.jpg         
           :scale: 50 %
           :target: ../_images/b5.jpg
+          :figclass: fig-class
 
 
