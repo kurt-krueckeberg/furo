@@ -1,10 +1,10 @@
 Book Cover 
 ==========
 
-This is the book cover for the **Petzen and Nammen Church Register, 1785-1827**
+This is the book cover for the **Petzen Church Register, 1785-1827**
 that was downloaded from `Archion.de <https://archion.de>`_ [citation]_.
 
-.. list-table:: **Petzen and Nammen Church Register, 1785-1827**
+.. list-table:: **Petzen Church Register, 1785-1827**
    :header-rows: 1
 
    * - Click to view full size image 
