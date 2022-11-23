@@ -6,32 +6,25 @@ Remarks on reST
 
 The ``:scale:`` option for ``:image:`` and ``:figure:`` seem to require the the python Pillow package according to
 
-To style or scale the image in **figure**, you need to used ``image`` for the ``figclass`` and ``figwidth`` like this:
+To apply ``:scale:`` or ``:with:`` options to the image within an figure (instead of to the figure itself), you must ``image`` for
+as the ``figclass`` and ``figwidth`` like this:
 
-.. rst::
+.. code-block:: rst
 
    .. figure:: /images/image1.jpg         
-      :scale: 15 %
       :figclass: image
       :class: with-border
       :figwidth: image 
+      :scale: 15 %
                                                               
       Caption for image  
                                                               
       Legend where I will put description (or transcription).
 
-When using figures in tables, the ``:width:`` seems to be a better choice that to avoid distortion. Read up on
-``figwidth`` and ``width``.
-
 The default figure ``target:`` option is to display the full image. 
 
 You can add captions and legends to a figure. The legend can even include a paragraph and a table, as the 
 docutils documentation example shows, or a list, but I can't think of a use for this flexibilty. 
-
-When images or figures have a target, the path must be specified as ``../_images/target.jpg``, sort of a hassle.
-
-
-
 
 Plans
 -----

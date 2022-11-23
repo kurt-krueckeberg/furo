@@ -10,10 +10,10 @@ Below is a list-style table that contains figures that could have captions, scal
    * - Click on image to view it fullsize it
    * -
        .. figure:: /images/image1.jpg         
-          :scale: 15 %
           :figclass: image
           :class: with-border
           :figwidth: image 
+          :scale: 15 %
  
           Caption for image  
 
@@ -21,10 +21,10 @@ Below is a list-style table that contains figures that could have captions, scal
    
    * - 
        .. figure:: /images/image11.jpg         
-          :scale: 25 %
-          :figclass: with-border
+          :figclass: image
           :class: with-border
           :figwidth: image
+          :scale: 25 %
  
           Caption for image  
 
