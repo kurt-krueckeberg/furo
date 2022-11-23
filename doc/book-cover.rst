@@ -1,10 +1,10 @@
-Figure Test
-===========
+Book Cover 
+==========
 
-Below is a list-style table that contains figures that could have captions, scaled and have tagets.
- Using ``:figwidth: iamge`` I believe 
+This is the book cover for the **Petzen and Nammen Church Register, 1785-1827**
+that was downloaded from `Archion.de <https://archion.de>`_ [citation]_.
 
-.. list-table:: Table title goes here
+.. list-table:: **Petzen and Nammen Church Register, 1785-1827**
    :header-rows: 1
 
    * - Click image to view fullsize 
@@ -15,18 +15,25 @@ Below is a list-style table that contains figures that could have captions, scal
           :figwidth: image 
           :scale: 15 %
  
-          Caption for image  
+          Front Cover of Parish Register
 
-          Legend where I will put description (or transcription).
-   
-   * - 
-       .. figure:: /images/image11.jpg         
-          :figclass: image
-          :class: with-border
-          :figwidth: image
-          :scale: 25 %
+Transcription
+-------------
+
+Transcription of book cover's text::
+  
+ Petzen Gemeinde 
+    darin
+  getrauete, gebohrne, confirmierte 
+   und begrabene
  
-          Caption for image  
+ Johann Wilhelm
+   im Jahr 1785 [pencilled in following 1785: - 1823]
 
-          Legend where I will put description.
+Comments
+^^^^^^^^
+
+
+.. [citation] imaged at Archion.de (http://www.archion.de/p/d39d63bf9f/ : 23 November 2022), path: Browse > Niedersachsen: Niedersächsisches Landesarchiv > Kirchenbücher der Evangelisch-Lutherischen Landeskirche Schaumburg-Lippe >
+   Petzen > Verzeichnis der Getauften, Konfirmierten, Getrauten und Gestorbenen 1785-1827 > Bild 1 of 357
 
