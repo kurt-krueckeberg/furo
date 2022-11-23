@@ -7,7 +7,7 @@ that was downloaded from `Archion.de <https://archion.de>`_ [citation]_.
 .. list-table:: **Petzen and Nammen Church Register, 1785-1827**
    :header-rows: 1
 
-   * - Click image to view fullsize 
+   * - Click to view full size image 
    * -
        .. figure:: /images/image1.jpg         
           :figclass: image
@@ -24,11 +24,14 @@ Transcription of book cover's text::
   
  Petzen Gemeinde 
     darin
+ [the next two lines require more effort]
   getrauete, gebohrne, confirmierte 
    und begrabene
+ [the next three lines require more effort]
  
  Johann Wilhelm
    im Jahr 1785 [pencilled in following 1785: - 1823]
+  [remaining lines to be finished in near future]
 
 Comments
 ^^^^^^^^
