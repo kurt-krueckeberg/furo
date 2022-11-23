@@ -11,6 +11,7 @@ Welcome to Petzen Church Book 1785-1827 Research's documentation!
    :caption: Contents:
 
    doc/book-cover
+   doc/d2
    doc/summary
 
 Indices and tables
