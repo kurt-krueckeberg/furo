@@ -1,0 +1,7 @@
+To enable complete PHP debugging in vscode run under WSL: 
+
+- Make sure vscode's "WSL Extension" is installed.
+- Install the WSL versions of all extensions.
+
+Follow the configuration steps in the documentation that accompanies the xdebug/debug vscode extentension. 
+Note: Select the appropriate debug configuration--CLI, Webserver,etc-- from the pull-down list.
