@@ -1,7 +1,4 @@
 /* See the furo documentation */
-.fig-class {
-  border: 3px solid #ccc; /* change to ussass settings? */
-  background: #eee;
-  margin: auto;
-  padding: 15px 10px;
+figure.with-border, img.with-border {
+	border: 2px solid var(--color-foreground-border);
 }

@@ -2,25 +2,29 @@ Figure Test
 ===========
 
 Below is a list-style table that contains figures that could have captions, scaled and have tagets.
+ Using ``:figwidth: iamge`` I believe 
 
 .. list-table:: Table title goes here
    :header-rows: 1
 
-   * - Click on image to expand it
+   * - Click on image to view it fullsize it
    * -
-       .. figure:: bild1.jpg         
-          :width: 50 %
-          :target: ../_images/bild1.jpg
-          :figclass: fig-class
+       .. figure:: /images/image1.jpg         
+          :scale: 15 %
+          :figclass: image
+          :class: with-border
+          :figwidth: image 
  
           Caption for image  
 
           Legend where I will put description (or transcription).
    
    * - 
-       .. figure:: bild11.jpg         
+       .. figure:: /images/image11.jpg         
           :scale: 25 %
-          :target: ../_images/b5.jpg
+          :figclass: with-border
+          :class: with-border
+          :figwidth: image
  
           Caption for image  
 

@@ -12,10 +12,7 @@ Welcome to Petzen Church Book 1785-1827 Research's documentation!
 
    doc/summary
    doc/fig
-   doc/image3
-   doc/image4
-   doc/image5
-
+   doc/img
 
 Indices and tables
 ==================

@@ -52,6 +52,6 @@ html_theme = 'furo'
 html_static_path = ['static']
 
 # or fully qualified paths (eg. https://...)
-#html_css_files = [
-#    'custom.css',
-#]
+html_css_files = [
+    'custom.css',
+]
