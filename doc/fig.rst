@@ -7,7 +7,7 @@ Below is a list-style table that contains figures that could have captions, scal
 .. list-table:: Table title goes here
    :header-rows: 1
 
-   * - Click on image to view it fullsize it
+   * - Click image to view fullsize 
    * -
        .. figure:: /images/image1.jpg         
           :figclass: image
