@@ -12,14 +12,14 @@ foreach ($iter as $key => $value) {
 }
 
 return;
+
 /*
-
-
 
 $md2html = function(\SplFileInfo $info) use ($template_name) 
 {
 
-preg_match(...)
+$m = preg_replace("^#+\s(Tr.*)$", "$1\r\~~~~~~~\r'r::\r\r");
+
 
 };
 
