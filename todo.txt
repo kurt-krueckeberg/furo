@@ -31,9 +31,11 @@ docutils documentation example shows, or a list, but I can't think of a use for 
 Plans
 -----
 
-- The pages of images will include a top-level header and section headers for info. like the person's name, citation and transcription.
-  Later defived facts and events and sql-related information could be added.
-- We need a location for transcribing the colum headers for event--baptism, marriage, etc. Including this usin an rst include.
+::
+
+ TODO: Remove the find command ansd instead use code entirely to iterate file
+ in /t folder and do preg_match or preg_replaced . Also change the format of the .rst files in /p
+ to be whatever makes the php code easiest.
 
 Generate Pages
 ~~~~~~~~~~~~~~

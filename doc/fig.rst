@@ -30,3 +30,4 @@ Using ``:figwidth: image`` I believe
 
           Legend where I will put description.
 
+.. include:: /t/timg1.rst
