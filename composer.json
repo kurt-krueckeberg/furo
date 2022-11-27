@@ -1,0 +1,20 @@
+{
+    "name": "kurt-krueckeberg/furo",
+    "description": "Petzen website code",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Tools\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=8.1" 
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kurt Krueckeberg",
+            "email": "kurt.krueckeberg@gmail.com"
+        }
+    ]
+}
