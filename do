@@ -1,6 +1,8 @@
 #! /usr/bin/env php
 <?php
 
+exec("rm t/*");
+
 // copy transcript file to t folder
 exec("cp p/* t");
 
@@ -11,3 +13,7 @@ $f = 'find -L t -name "*.rst" -exec sed -r -i "s/^([^\.].*)$/    \\1/g" {} \;';
 echo "Doing this command:\n" .  $f . "\n";
 
 exec($f);
+
+exec("make clean");
+
+exec ("make html");

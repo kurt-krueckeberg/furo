@@ -9,7 +9,7 @@ Using ``:figwidth: image`` I believe
 
    * - Click image to view fullsize 
    * -
-       .. figure:: /images/image1.jpg         
+       .. figure:: /images/img1.jpg         
           :figclass: image
           :class: with-border
           :figwidth: image 
@@ -20,7 +20,7 @@ Using ``:figwidth: image`` I believe
           Legend where I will put description (or transcription).
    
    * - 
-       .. figure:: /images/image11.jpg         
+       .. figure:: /images/img11.jpg         
           :figclass: image
           :class: with-border
           :figwidth: image
