@@ -9,7 +9,7 @@ Using ``:figwidth: image`` I believe
 
    * - Click image to view fullsize 
    * -
-       .. figure:: /images/image1.jpg         
+       .. figure:: /images/img1.jpg         
           :figclass: image
           :class: with-border
           :figwidth: image 
