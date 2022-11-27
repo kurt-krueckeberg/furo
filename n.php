@@ -3,11 +3,10 @@ declare(strict_types=1);
 include "vendor/autoload.php";
 //use Tools\FileReader;
 
-$iterator = new FilesystemIterator(__DIR__, FilesystemIterator::CURRENT_AS_PATHNAME);
+$it = new FilesystemIterator(__DIR__);
 
-foreach ($iterator as $fileinfo)
-
-    echo $iterator->current() . "\n";
+foreach ($it as $x)
+ var_dump($x);
 
 /*
 $iter = new FilesystemIterator("t");
