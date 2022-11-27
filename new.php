@@ -18,7 +18,7 @@ return;
 $md2html = function(\SplFileInfo $info) use ($template_name) 
 {
 
-$m = preg_replace("^#+\s(Tr.*)$", "$1\r\~~~~~~~\r'r::\r\r");
+$m = preg_replace_callback("^#+\s(Tr.*)$", "$1\r\~~~~~~~\r'r::\r\r");
 
 
 };
