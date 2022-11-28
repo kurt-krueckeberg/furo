@@ -1,34 +1,53 @@
 <?php
 declare(strict_types=1);
-include "vendor/autoload.php";
-//use Tools\FileReader;
-
-$it = new FilesystemIterator(__DIR__);
-
-foreach ($it as $x)
- var_dump($x);
 
 /*
-$iter = new FilesystemIterator("t");
-var_dump($iter);
+$files = new FilesystemIterator('.', FilesystemIterator::SKIP_DOTS);
 
-foreach ($iter as $value) { 
-   var_dump($value);
+foreach ($files as $key => $item) {
+
+    var_dump($key); // $key is used a full path name
 }
 
-return;
+echo "\nEx 2\n";
 */
-
-/*
-
-$md2html = function(\SplFileInfo $info) use ($template_name) 
-{
-
-$m = preg_replace_callback("^#+\s(Tr.*)$", "$1\r\~~~~~~~\r'r::\r\r");
-
-
+class writer {
+    
+    public fuction __constructor(private string $opath)
+    {
+     $this->ofile = new SplFileObject($opath,"w");
+    }
+    
+    public function __invoke(string $line)
+    {
+       $this->ofile->write($line);
+    }
 };
 
+//$files = new FilesystemIterator('p', FilesystemIterator::KEY_AS_FILENAME | FilesystemIterator::SKIP_DOTS);
+$files = new FilesystemIterator('p');
 
-foreach ($md_filter_iter as $info) $md2html($info);
-*/
+
+foreach ($files as $key => $item) {
+
+    $iter = new reader($key);
+    $writer f($opath); 
+    string $line;
+
+    function() use ($line) {
+        if ($line[0] == '#') {
+           $str = substr();
+            $l =
+            strlen($str);
+            $x = $str . "\r" . fill('~',  $l).
+            "\n";
+        } else { 
+            $x = '   ' . $line;
+        }
+        return $x;
+        }
+    }
+    
+    foreach ($iter as $line) f(t($line));
+
+}
