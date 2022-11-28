@@ -27,27 +27,28 @@ class writer {
 //$files = new FilesystemIterator('p', FilesystemIterator::KEY_AS_FILENAME | FilesystemIterator::SKIP_DOTS);
 $files = new FilesystemIterator('p');
 
+ 
+/*  Look into generators
+  */
+
+$format = function(string $line) {
+ $x = rtrim($line);
+    if (preg_match('^#+(\S.*)$', $x, $m) === 1) {
+        $len = strlen($m[1]);
+        $x = $str . "\r" . fill('~',  $l).
+        "\n";
+
+    } else
+        $x = '   ' . $line;
+    
+    return $x;
+};
 
 foreach ($files as $key => $item) {
 
     $iter = new reader($key);
-    $writer f($opath); 
-    string $line;
 
-    function() use ($line) {
-        if ($line[0] == '#') {
-           $str = substr();
-            $l =
-            strlen($str);
-            $x = $str . "\r" . fill('~',  $l).
-            "\n";
-        } else { 
-            $x = '   ' . $line;
-        }
-        return $x;
-        }
-    }
-    
-    foreach ($iter as $line) f(t($line));
+    $writer write($opath); 
 
+    foreach ($iter as $line) write($format($line));
 }
