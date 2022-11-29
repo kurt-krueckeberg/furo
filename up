@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 ./b
 cd _build/html
-tar -cvzf ~/f/p.tar.gz ./*
+tar -cvzf ./p.tar.gz ./*
 sshpass -p kk0457 scp ./p.tar.gz hostwinds:~/
 sshpass -p kk0457 ssh hostwinds
