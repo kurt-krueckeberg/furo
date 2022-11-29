@@ -1,4 +1,4 @@
-### Transcription 
+#
 
 Kirchen Buch
   darin
@@ -6,7 +6,7 @@ alle in den zur Petzen Gemeinde
 gehörigen DorfSchaften
   angeführt werden
 
-### Translation 
+#
 
 Church Register
 in which all the marriages, births, confimrmations and burials
