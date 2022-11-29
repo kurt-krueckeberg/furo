@@ -17,7 +17,7 @@ class Writer {
 $iter = new FilesystemIterator('p', FilesystemIterator::KEY_AS_FILENAME |FilesystemIterator::CURRENT_AS_PATHNAME | FilesystemIterator::SKIP_DOTS);
  
 /*  
-Look into generators
+todo:disting. betw transcr. and tranllatin--literal vs block quoteLook into generators
   */
 
 $format = function(string $line) {
@@ -26,11 +26,10 @@ $format = function(string $line) {
 
     if (preg_match("@^#+\s(\S.*)$@", $str, $m) === 1) {
 
-        $str = $m[1] . "\n" . str_repeat('~',  strlen($m[1])) .
- "\n";
+        $str = $m[1] . "\n" . str_repeat('~',  strlen($m[1])) . "\n::\n";
 
     } else
-        $str = '   ' . $line;
+        $str = ' ' . $line;
     
     return $str;
 };
