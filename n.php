@@ -1,21 +1,11 @@
 <?php
 declare(strict_types=1);
 
-/*
-$files = new FilesystemIterator('.', FilesystemIterator::SKIP_DOTS);
-
-foreach ($files as $key => $item) {
-
-    var_dump($key); // $key is used a full path name
-}
-
-echo "\nEx 2\n";
-*/
 class writer {
     
     public fuction __constructor(private string $opath)
     {
-     $this->ofile = new SplFileObject($opath,"w");
+     $this->ofile = new SplFileObject($opath,"w"); // todo: Add the readahead and skipempty param of FileReader
     }
     
     public function __invoke(string $line)
@@ -24,31 +14,31 @@ class writer {
     }
 };
 
-//$files = new FilesystemIterator('p', FilesystemIterator::KEY_AS_FILENAME | FilesystemIterator::SKIP_DOTS);
-$files = new FilesystemIterator('p');
-
+$iter = new FilesystemIterator('p', FilesystemIterator::KEY_AS_FILENAME |FilesystemIterator::CURRENT_AS_PATHNAME FilesystemIterator::SKIP_DOTS);
  
-/*  Look into generators
+/*  
+Look into generators
   */
 
 $format = function(string $line) {
- $x = rtrim($line);
-    if (preg_match('^#+(\S.*)$', $x, $m) === 1) {
-        $len = strlen($m[1]);
-        $x = $str . "\r" . fill('~',  $l).
-        "\n";
+
+    $str = rtrim($line);
+
+    if (preg_match('^#+(\S.*)$', $str, $m) === 1) {
+
+        $str = $m[1] . "\n" . str_repeat('~',  strlen($m[1])) . "\n";
 
     } else
-        $x = '   ' . $line;
+        $str = '   ' . $line;
     
-    return $x;
+    return $str;
 };
 
-foreach ($files as $key => $item) {
+foreach ($iter as $file => $path) {
 
-    $iter = new reader($key);
+    $iter = new reader($path);
 
-    $writer write($opath); 
+    $writer write('t/' . $file); 
 
     foreach ($iter as $line) write($format($line));
 }
