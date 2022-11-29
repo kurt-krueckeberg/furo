@@ -2,5 +2,5 @@
 ./b
 cd _build/html
 tar -cvzf ~/f/p.tar.gz ./*
-scp ./p.tar.gz hostwinds:~/
-ssh hostwinds
+sshpass -p kk0457 scp ./p.tar.gz hostwinds:~/
+sshpass -p kk0457 ssh hostwinds
