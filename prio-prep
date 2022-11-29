@@ -13,7 +13,7 @@ enum fs: string
 
 class Writer {
     private static $script_spaces = 1;
-    private static $translation_spaces = 1;
+    private static $translation_spaces = 4;
     
     private $fs;
     
@@ -41,7 +41,6 @@ class Writer {
      switch ($this->fs) {
            
           case fs::transcript_header:
-          case fs::translation_header:
               
             //if ($line[0] !== '#')
             //    throw LogicException("# placeholder for transcript header not found.");
