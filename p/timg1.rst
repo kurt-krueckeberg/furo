@@ -18,8 +18,9 @@ Church Register
     in which
 all the marriages, births, confimrmations and burials
 in the villages that belong to [are part of, comprise] the Petzen parish are listed
-started by Wilhelm Wilhelm Roß early[earliest?/first? in 1785] preacher 
+    started by
+Wilhelm Wilhelm Roß early[earliest?/first? in 1785] preacher 
  in the year 1785
-   II [likely designation as the second of two volume]
+   II [this likely designates this as the 2nd of the two church registers]
 Bückeburg        und    Nammen
 from 1785 to 1827       from 1785 to 1799

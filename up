@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+./b
+cd _build/html
+tar -cvzf ~/f/p.tar.gz ./*
+scp ./p.tar.gz hostwinds:~/
+ssh hostwinds
