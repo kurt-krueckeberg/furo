@@ -1,8 +1,5 @@
 <?php
 declare(strict_types=1);
-use Tools\FileReader;
-
-include 'vendor/autoload.php';
 
 class Writer {
     
@@ -29,7 +26,8 @@ $format = function(string $line) {
 
     if (preg_match("@^#+\s(\S.*)$@", $str, $m) === 1) {
 
-        $str = $m[1] . "\n" . str_repeat('~',  strlen($m[1]));
+        $str = $m[1] . "\n" . str_repeat('~',  strlen($m[1])) .
+ "\n";
 
     } else
         $str = '   ' . $line;
@@ -37,13 +35,15 @@ $format = function(string $line) {
     return $str;
 };
 
-foreach ($iter as $file => $path) {
+foreach ($iter as $file_name => $path) {
 
-    $iter = new FileReader($path);
+    $file = new SplFileObject($path, "r"); 
 
-    $writer =  new Writer('t/' . $file); 
+    $file->setFlags(\SplFileObject::READ_AHEAD);
 
-    foreach ($iter as $line) $writer($format($line) . "\n");
+    $writer =  new Writer('t/' . $file_name); 
+
+    foreach ($file as $line) $writer($format($line));
      
     $writer(" ");
 }
