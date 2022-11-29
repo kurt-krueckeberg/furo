@@ -13,7 +13,7 @@ class Writer {
     
     public function __invoke(string $line)
     {
-       $this->ofile->fwrite($line . "\n");
+       $this->ofile->fwrite($line); 
     }
 };
 
@@ -29,7 +29,7 @@ $format = function(string $line) {
 
     if (preg_match("@^#+\s(\S.*)$@", $str, $m) === 1) {
 
-        $str = $m[1] . "\n" . str_repeat('~',  strlen($m[1])) . "\n";
+        $str = $m[1] . "\n" . str_repeat('~',  strlen($m[1]));
 
     } else
         $str = '   ' . $line;
@@ -43,7 +43,7 @@ foreach ($iter as $file => $path) {
 
     $writer =  new Writer('t/' . $file); 
 
-    foreach ($iter as $line) $writer($format($line));
+    foreach ($iter as $line) $writer($format($line) . "\n");
      
     $writer(" ");
 }
