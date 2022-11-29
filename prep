@@ -1,3 +1,4 @@
+#! /usr/bin/env php
 <?php
 declare(strict_types=1);
  
@@ -9,24 +10,6 @@ enum fs: string
     case transcript_text = 'script';
     case translation_text = 'translation';
 }
-
-enum State
-{
-    case transcript_header;
-    case transcript_text;
-    case translation_header;
-    case translation_text;
-    
-    public function text(): string
-    {
-        return match($this) 
-        {
-            State::transcript_header => "Transcription\n~~~~~~~~~~~~~",
-            State::translation_header => "Translation\n~~~~~~~~~~~",               
-        };
-    }
-}
-//todo: skip blandk lines
 
 class Writer {
     private static $script_spaces = 1;
@@ -104,24 +87,6 @@ class Writer {
 
 $iter = new FilesystemIterator('p', FilesystemIterator::KEY_AS_FILENAME |FilesystemIterator::CURRENT_AS_PATHNAME | FilesystemIterator::SKIP_DOTS);
  
-/*  
-todo:disting. betw transcr. and tranllatin--literal vs block quoteLook into generators
-  */
-
-$format = function(string $line) {
-
-    $str = rtrim($line);
-
-    if (preg_match("@^#+\s(\S.*)$@", $str, $m) === 1) {
-
-        $str = $m[1] . "\n" . str_repeat('~',  strlen($m[1])) . "\n::\n";
-
-    } else
-        $str = ' ' . $line;
-    
-    return $str;
-};
-
 foreach ($iter as $file_name => $path) {
 
     $file = new SplFileObject($path, "r"); 
@@ -133,6 +98,5 @@ foreach ($iter as $file_name => $path) {
     foreach ($file as $line) 
         $writer($line);
     
-     
     $writer(" ");
 }

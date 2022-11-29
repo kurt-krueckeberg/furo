@@ -3,7 +3,7 @@ Content Summary
 
 Occurances of Krückeberg and Weiland surnames in the *Petzen and Nammen Church Register, 1785 to 1827*. 
 
-.. Note:: The permalinks (links that will not change) work
+.. Note:: The permalinks (links that will not change) only work
    if you have an `Archion.de <https://www.archion.de>`__ subscription.
 
 .. csv-table:: Marriages
