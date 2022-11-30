@@ -27,7 +27,7 @@ author = 'Kurt, Mel and Steve Krueckeberg'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [ 'sphinx.ext.githubpages', 'sphinx.ext.todo'
+extensions = [ 'sphinx.ext.githubpages', 'sphinx.ext.todo', 'myst_parser'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -36,7 +36,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store' 'todo.rst', 'p', 't', 'd']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store' 'todo.rst', 'p', 't', 'd', 'md']
 
 
 # -- Options for HTML output -------------------------------------------------
