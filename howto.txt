@@ -1,2 +1,3 @@
 Create .pdphinx-doc rst setup:
 https://www.youtube.com/watch?v=MLsD0MWM3bQ
+https://vimalkvn.com/create-sphinx-pdf/
