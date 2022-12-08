@@ -2,6 +2,21 @@
 <?php
 declare(strict_types=1);
  
+/*
+Overview:
+
+This code processes the transcript-and-translation files in folder p and 
+rewrites them to the folder t. rst headers and literal blocks are added for:
+
+* the transcript of the church book entry, and
+* its translation
+
+Implementation
+
+The fs enumeration models the finite state machine that indicates the part of
+the input file that line of text belongs to.
+
+*/
 
 enum fs: string
 {
