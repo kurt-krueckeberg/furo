@@ -1,11 +1,11 @@
-# Guide for Geneating PDF from Sphinxdo
+# HOWTO Geneating PDF from Sphinxdoc
 
-See
+## Guides
 
 * https://www.youtube.com/watch?v=MLsD0MWM3bQ
 * https://vimalkvn.com/create-sphinx-pdf/
 
-## Install equired Package
+## Install Equired Packages
 
 ```bash
 sudo apt install fonts-freefont-otf latexmk python3-venv \
