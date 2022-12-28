@@ -36,13 +36,35 @@ INSERT INTO person (id, fname, lname, sex, fid, mid, bdate, founder, bdorf, bkre
 DECLARE unknown INTEGER;
 SET unknown = 1;
 
+#-- citations for events
+#-- NOTE: If citations can apply to more than one event, we would use this table and remove
+#-- event(cite) foreign reference from the event table.
+#-- create table if not exists cite_events (
+#--  cid int not null,
+#--  eid int not null,
+#--  primary key (cid, eid),
+#--  foreign key cid reference cite(id),
+#--  foreign key eid reference event(id)
+#--);
+create table if not exists cite (
+ id int NOT NULL AUTO_INCREMENT,
+ text varchar(200),
+ comment varchar(400),
+ primary key(id)
+);
+
+#-- pid is the person id.  Does a marriage creates two events to be created, one for each spouse. We can solve this
+#-- with a person_events table?
+#-- How does GedcomX handle this?
 create table IF NOT EXISTS event (
   id int NOT NULL AUTO_INCREMENT, 
   pid int not null,
   edate date not null,
   type ENUM('baptize','confirm','marry', 'birth', 'death') not null,
+  cid int not null,
   primary key(id),
-  foreign key (pid) references person(id)
+  foreign key (pid) references person(id), 
+  foreign key (cite) references cite(id)
 );
 
 #--The married couple, husband and wife, constitute a 'family', even if they neve have children.
