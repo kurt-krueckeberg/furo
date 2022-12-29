@@ -6,4 +6,5 @@ The Unicode default is okay for the former but if you want `'Ü' = 'UE'`, then y
 
 ## Unknown person
 
-The unknown person has `id` of 1, `fname` and `lname` of `unknown`, `fid` and `mid` of 1,  birth date of `0000-00-00`, `bdorf` of `unknown`.
+The `person(id)` of **1** is used to designate any as yet unknown individual, none of whose attibutes are have meanful values.
+The `fname` and `lname` are `unknown`, the `fid` and `mid` is `1`,  birth date is `0000-00-00`, and `bdorf` is `unknown`.
