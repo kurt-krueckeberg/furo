@@ -49,7 +49,7 @@ SET unknown = 1;
 create table if not exists cite (
  id int NOT NULL AUTO_INCREMENT,
  text varchar(200),
- comment varchar(400),
+ comments varchar(400),
  primary key(id)
 );
 
