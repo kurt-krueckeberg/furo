@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+# inserts a single space into lines that don't begin with ".#:".
+
 # The sed -r options changes the regex flavor to sed's extended regex.
 # 
 # We change line that don't begin with any of ".#:" to begin with a leading space. In rst
