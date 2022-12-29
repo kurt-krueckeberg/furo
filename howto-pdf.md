@@ -1,5 +1,7 @@
 # HOWTO Geneating PDF from Sphinxdoc
 
+Note: pandoc can natively create pdf. It also works with several makrdown formats like PHP Extra.
+
 ## Guides
 
 * https://www.youtube.com/watch?v=MLsD0MWM3bQ
