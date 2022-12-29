@@ -58,10 +58,12 @@ create table if not exists cite (
 #-- How does GedcomX handle this?
 create table IF NOT EXISTS event (
   id int NOT NULL AUTO_INCREMENT, 
+  pid int not null,
   edate date not null,
   type ENUM('baptize','confirm','marry', 'birth', 'death') not null,
   cid int not null,
   primary key(id),
+  foreign key (pid) references person(id), 
   foreign key (cite) references cite(id)
 );
 
@@ -76,13 +78,14 @@ create table IF NOT EXISTS family (
   foreign key (wifeid) references person(id), 
 );
 
-create table IF NOT EXISTS participants (
+#-- pid is person(id)
+#-- bapid is the baptism event id.
+create table IF NOT EXISTS sponsors (
   pid int not null,
-  eid int not null,
-  role enum('principle','pastor','sponsor','parent'),
-  primary key (pid, eid),
+  baptid int not null,
+  primary key (pid, bapid),
   foreign key (pid) references person(id),
-  foreign key (eid) references event(id)
+  foreign key (baptid) references event(id),
 );
 
 #-- fid is family id.

@@ -31,7 +31,7 @@ create table IF NOT EXISTS person (
 );
 
 # -- Insert UNKONWN person into the person table. The unknown person has person(id) of 1, the first auto_increment value, and the fid and mid are also 1, referring this same all-purpose unknown person.
-INSERT INTO person (id, fname, lname, sex, fid, mid, bdate, founder, bdorf, bkreis, bland) VALUES (1, "unknown", "unknown", "u", 1, 1, "0000-00-00", false, "unknown", "unknown", "unknown");
+INSERT INTO person (id, fname, lname, sex, fid, mid, bdate, founder, bdorf, bkreis, bland) VALUES (1, "unknown", "unknown", "u", 1, 1, "0000-00-00", "unknown");
 
 DECLARE unknown INTEGER;
 SET unknown = 1;
@@ -58,12 +58,10 @@ create table if not exists cite (
 #-- How does GedcomX handle this?
 create table IF NOT EXISTS event (
   id int NOT NULL AUTO_INCREMENT, 
-  pid int not null,
   edate date not null,
   type ENUM('baptize','confirm','marry', 'birth', 'death') not null,
   cid int not null,
   primary key(id),
-  foreign key (pid) references person(id), 
   foreign key (cite) references cite(id)
 );
 
@@ -78,14 +76,13 @@ create table IF NOT EXISTS family (
   foreign key (wifeid) references person(id), 
 );
 
-#-- pid is person(id)
-#-- bapid is the baptism event id.
-create table IF NOT EXISTS sponsors (
+create table IF NOT EXISTS participants (
   pid int not null,
-  baptid int not null,
-  primary key (pid, bapid),
+  eid int not null,
+  role enum('principle','pastor','sponsor','parent'),
+  primary key (pid, eid),
   foreign key (pid) references person(id),
-  foreign key (baptid) references event(id),
+  foreign key (eid) references event(id)
 );
 
 #-- fid is family id.
