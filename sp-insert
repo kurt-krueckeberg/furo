@@ -2,8 +2,8 @@
 
 # The sed -r options changes the regex flavor to sed's extended regex.
 # 
-# We change line that don't begin with any of ".#:" to begin with leading space. In rst
+# We change line that don't begin with any of ".#:" to begin with a leading space. In rst
 # quoted paragraphs are created by just indenting them more than the surrounding paragraphs.
-# A a single space or a tab can be used.
+# A single space or a tab can be used.
 
 find -L t -name $1 -exec sed -r -i "s/^([^\.#:].*)$/ \\1/g" {} \; 
