@@ -11,4 +11,4 @@ The `person(id)` of **1** designates any as yet unknown individual whose attibut
 * `fname` and `lname` are `unknown`
 * `fid` and `mid` are `1`
 * `badte`, birth date, is `0000-00-00`
-* `bplace`, virth place, is `unknown`
+* `bplace`, birth place, is `unknown`
