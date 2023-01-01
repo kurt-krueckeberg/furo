@@ -36,9 +36,11 @@ INSERT INTO person (id, fname, lname, sex, fid, mid, bdate, founder, bplace) VAL
 DECLARE unknown INTEGER;
 SET unknown = 1;
 
+
+# -- images or posssiblye pdfs.
 # -- We can have more than one image per page--at least now.
 # -- This table just give the images location on the harddrive
-# -- Compare to RootsMage
+# -- Compare to RootsMagic
 create table if not exists imgs (
  id int not null,
  path varchar[160] not null,
