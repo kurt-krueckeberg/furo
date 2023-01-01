@@ -36,9 +36,18 @@ INSERT INTO person (id, fname, lname, sex, fid, mid, bdate, founder, bplace) VAL
 DECLARE unknown INTEGER;
 SET unknown = 1;
 
+# -- We can have more than one image per page--at least now.
+# -- This table just give the images location on the harddrive
+# -- Compare to RootsMage
+create table if not exists imgs (
+ id int not null,
+ path varchar[160] not null,
+ primary key(id)
+);
+
 #-- citations for events
-#-- NOTE: If citations can apply to more than one event, we would use this table and remove
-#-- event(cite) foreign reference from the event table.
+#-- NOTE: If citations can apply to more than one event, we would use this table and just remove the
+#--    event(cite) foreign reference from the event table.
 #-- create table if not exists cite_events (
 #--  cid int not null,
 #--  eid int not null,
@@ -48,8 +57,10 @@ SET unknown = 1;
 #--);
 create table if not exists cite (
  id int NOT NULL AUTO_INCREMENT,
+ int pgno not null,
  text varchar(200),
- comments varchar(400),
+ comments varchar(400), 
+ imgid not null
  primary key(id)
 );
 
@@ -60,9 +71,9 @@ create table IF NOT EXISTS event (
   id int NOT NULL AUTO_INCREMENT, 
   edate date not null,
   type ENUM('baptize','confirm','marry', 'birth', 'death') not null,
-  cid int not null,
+  citeid int not null,
   primary key(id),
-  foreign key (cite) references cite(id)
+  foreign key (citeid) references cite(id)
 );
 
 #--The married couple, husband and wife, constitute a 'family', even if they neve have children.
