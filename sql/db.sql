@@ -37,9 +37,9 @@ DECLARE unknown INTEGER;
 SET unknown = 1;
 
 
-# -- images or posssiblye pdfs.
-# -- We can have more than one image per page--at least now.
-# -- This table just give the images location on the harddrive
+# -- images or posssibly pdfs.
+# -- We can have more than one image per page.
+# -- This table gives the path on the harddrive
 # -- Compare to RootsMagic
 create table if not exists imgs (
  id int not null,
@@ -63,10 +63,12 @@ create table if not exists cite (
  text varchar(200),
  comments varchar(400), 
  imgid not null
- primary key(id)
+ primary key(id),
+ foreign key (imgid) references imgs(id)
 );
 
-#-- pid is the person id.  Does a marriage creates two events to be created, one for each spouse. We can solve this
+#-- pid is the person id. Events have a 'principle' person but 
+#-- may have participants
 #-- with a person_events table?
 #-- How does GedcomX handle this?
 create table IF NOT EXISTS event (
@@ -78,6 +80,15 @@ create table IF NOT EXISTS event (
   foreign key (citeid) references cite(id)
 );
 
+create table IF NOT EXISTS participants (
+  pid int not null,
+  eid int not null,
+  role enum('principle','pastor','sponsor','parent', 'witness'),
+  primary key (pid, eid),
+  foreign key (pid) references person(id),
+  foreign key (eid) references event(id)
+);
+
 #--The married couple, husband and wife, constitute a 'family', even if they neve have children.
 create table IF NOT EXISTS family (
   id int NOT NULL AUTO_INCREMENT,
@@ -87,15 +98,6 @@ create table IF NOT EXISTS family (
   unique key (husbid, wifeid),
   foreign key (husbid) references person(id), 
   foreign key (wifeid) references person(id), 
-);
-
-create table IF NOT EXISTS participants (
-  pid int not null,
-  eid int not null,
-  role enum('principle','pastor','sponsor','parent'),
-  primary key (pid, eid),
-  foreign key (pid) references person(id),
-  foreign key (eid) references event(id)
 );
 
 #-- fid is family id.
