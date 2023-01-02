@@ -37,9 +37,9 @@ DECLARE unknown INTEGER;
 SET unknown = 1;
 
 
-# -- images or posssibly pdfs.
-# -- We can have more than one image per page.
-# -- This table gives the path on the harddrive
+# -- images or posssibly pdfs with images. This table gives the path on the harddrive
+# -- If we want to allow more than one image per page, then we need a
+# -- cite_imgs table instead. See below
 # -- Compare to RootsMagic
 create table if not exists imgs (
  id int not null,
@@ -66,6 +66,13 @@ create table if not exists cite (
  primary key(id),
  foreign key (imgid) references imgs(id)
 );
+
+cite_imgs(
+ cid int not null,
+ imgid int not null,
+ primary key(cid, ingid),
+ foreign key(cid) referecnes cite(id),
+ foreign key(imgid) referecnes imgs(id)
 
 #-- pid is the person id. Events have a 'principle' person but 
 #-- may have participants
