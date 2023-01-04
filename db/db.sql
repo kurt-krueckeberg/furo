@@ -67,6 +67,7 @@ create table if not exists cite (
  foreign key (imgid) references imgs(id)
 );
 
+#-- A citation has one or more referenced images.
 cite_imgs(
  cid int not null,
  imgid int not null,
