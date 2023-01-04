@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+# Purpose: Make text that doesn't begin with the characters ".#:". into a blockquote by inserting a single
+# space at the start of line since a single space or tab can be used in rST to creates a blockquote by indenting lines one
+# more than the surrounding paragraphs.
+#
+# The sed -r options changes the regex flavor to sed's extended regex.
+# 
+
+find -L t -name $1 -exec sed -r -i "s/^([^\.#:].*)$/ \\1/g" {} \; 
