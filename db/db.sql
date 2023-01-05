@@ -37,19 +37,20 @@ DECLARE unknown INTEGER;
 SET unknown = 1;
 
 
-# -- images or posssibly pdfs with images. This table gives the path on the harddrive
-# -- If we want to allow more than one image per page, then we need a
-# -- cite_imgs table instead. See below
-# -- Compare to RootsMagic
+# -- External church book images or pdfs with images. 
+# -- Top-level folder on the harddrive is hardcoded in application logic.
 create table if not exists imgs (
  id int not null,
- path varchar[160] not null,
+ fname varchar[160] not null,
  primary key(id)
 );
 
+#-- NOTE:
+#-- If citations can apply to more than one event, we would use this table and 
+#--  just remove the `event(cite)` foreign reference from the event table.
+#--
 #-- citations for events
-#-- NOTE: If citations can apply to more than one event, we would use this table and just remove the
-#--    event(cite) foreign reference from the event table.
+#--
 #-- create table if not exists cite_events (
 #--  cid int not null,
 #--  eid int not null,
