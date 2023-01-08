@@ -1,0 +1,11 @@
+p:2
+fname
+lname
+sex
+fid
+mid
+000-00-00
+bplace
+
+e:
+

@@ -1,0 +1,4 @@
+interface entity {
+  function munch() 
+
+}
