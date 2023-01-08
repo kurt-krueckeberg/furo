@@ -6,4 +6,5 @@ $retval=null;
 $output=exec("whoami");
 //echo "Returned with status $retval and output:\n";
 print_r($output);
+echo "\n";
 ?>
