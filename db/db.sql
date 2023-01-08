@@ -9,14 +9,18 @@ GRANT ALL PRIVILEGES ON petzen.* TO 'kurt'@'localhost' identified by 'kk0457';
 
 use petzen;
 
-# -- The first person insert into the database will be used for the UNKNOWN person: if mid or fid is 1 -> they are unknown.
-# -- If these person values are unkonwn, these defaults are used:
-# -- bdate - '0000-00-00' 
-# -- bdorf - 'unkown'
-# -- fid - 1
-# -- mid - 1
-
-create table IF NOT EXISTS person (
+# -- A person in the person table has:
+# --  key of id, an int 
+# --  a father fid and mother mid, foreign keys that are references to person(id)
+# -- the other attributes are self explanatory.
+ 
+# -- The tuple whose id is 1 represents the not-yet known person and has values:
+# --  id = fid = mid = 1
+# --  fname = lname = "unknown"
+# --  sex = 'u'
+# --  bdate - '0000-00-00' 
+# --  bdorf - 'unknown'
+create table IF NOT EXISTS persons (
  id int NOT NULL AUTO_INCREMENT,
  fname varchar(45) not null,
  lname varchar(20) not null,
@@ -30,7 +34,7 @@ create table IF NOT EXISTS person (
  primary key(id)
 );
 
-# -- Insert UNKONWN person into the person table. The unknown person has person(id) of 1, the first auto_increment value, and the fid and mid are also 1, referring this same all-purpose unknown person.
+# -- Insert the unknown person into the person table. The unknown person has person(id) of 1, the first auto_increment value, and the fid and mid are also 1, referring this same all-purpose unknown person.
 INSERT INTO person (id, fname, lname, sex, fid, mid, bdate, founder, bplace) VALUES (1, "unknown", "unknown", "u", 1, 1, "0000-00-00", "unknown");
 
 DECLARE unknown INTEGER;
